@@ -1,56 +1,81 @@
-# 💰 Expense Tracker
 
-A modern expense tracking web application built with React and Vite. The application helps users manage daily expenses, visualize spending patterns, and track financial activity through category-based and date-range filtering.
+# 💰 FinWise - Smart Expense Tracker
+
+A modern, feature-rich expense tracking application built with React, Firebase, and Vite. Take control of your personal finances with an intuitive interface for recording, categorizing, and visualizing your expenses.
+
+---
 
 ## ✨ Features
 
-- Add new expenses
+### 🔐 Authentication
+- Sign up with Email/Password
+- Sign in with Email/Password
+- Google Sign-In
+- Remember Me functionality
+- Forgot Password with email reset
+- Session management
+
+### 💳 Expense Management
+- Add new expenses with description, amount, category, and date
 - Edit existing expenses
-- Delete expenses
-- Categorize expenses
-- Filter expenses by category
-- Filter expenses by date range
-- View total spending summary
-- Interactive expense distribution chart using Chart.js
-- Data persistence using Local Storage
-- Responsive and user-friendly interface
-- Real-time expense tracking
+- Delete expenses with confirmation
+- Real-time updates
+- Category-based organization
 
-## 🚀 Tech Stack
+### 💰 Budget Planning
+- Set monthly budgets for each category
+- Track spending against budget
+- Visual progress bars
+- Budget status indicators (success, warning, danger)
+- Total budget overview
 
-- React
-- Vite
-- JavaScript (ES6+)
-- Chart.js
-- CSS3
-- Local Storage API
-## Live Demo( https://expense-tracker-erdxwxjh9-my-protfolio.vercel.app)
+### 💵 Income Tracking
+- Add income sources
+- Track total income
+- Calculate net savings
+- Income history
 
-## 📸 Features Overview
+### 📊 Analytics & Reports
+- Monthly spending reports
+- Category breakdown
+- Top 5 expenses
+- Spending insights
+- Advanced analytics dashboard
 
-### Expense Management
-- Create expense records
-- Update expense information
-- Remove unwanted records
+### 📥 Export Features
+- Export to CSV
+- Export to PDF
+- Print reports
 
-### Category Filtering
-- Food
-- Utilities
-- Transport
-- Shopping
-- Health
-- Entertainment
-- Other
+### 🎨 User Experience
+- Fully responsive design
+- Dark mode support
+- Smooth animations
+- Touch-friendly interface
+- Loading states
+- Error handling
 
-### Date Range Filtering
-- Filter expenses by start date
-- Filter expenses by end date
-- Clear filters instantly
+### 🔒 Security
+- Firebase Authentication
+- Firestore Security Rules
+- Secure data storage
+- User-specific data
 
-### Analytics Dashboard
-- Total expense summary
-- Pie chart visualization
-- Category-wise spending breakdown
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **React 18** | Frontend framework |
+| **Vite** | Build tool and dev server |
+| **Firebase Auth** | User authentication |
+| **Firestore** | Real-time database |
+| **CSS3** | Styling and animations |
+| **Vercel** | Hosting and deployment |
+
+---
+
 
 ## ⚙️ Installation
 
@@ -95,20 +120,6 @@ Preview production build:
 ```bash
 npm run preview
 ```
-
-## 💾 Data Storage
-
-This application uses the browser's Local Storage to save expense data, ensuring that expenses remain available even after refreshing the page.
-
-## 🎯 Future Enhancements
-
-- Monthly reports
-- Expense export to CSV/PDF
-- User authentication
-- Dark mode
-- Budget planning
-- Income tracking
-- Advanced analytics
 
 ## 🤝 Contributing
 
