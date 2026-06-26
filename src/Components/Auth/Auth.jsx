@@ -11,7 +11,7 @@ import {
   browserLocalPersistence,
   browserSessionPersistence,
   sendPasswordResetEmail
-} from '../../firebase';
+} from '../../Firebase';
 import ForgotPassword from './ForgotPassword';
 import './Auth.css';
 

@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from 'react';
 import { 
   auth,
@@ -15,7 +13,7 @@ import {
   serverTimestamp,
   setDoc,  
   getDoc   
-} from '../firebase';
+} from '../Firebase';
 
 export const useFirestoreData = () => {
   const [expenses, setExpenses] = useState([]);
