@@ -1,7 +1,7 @@
 // Components/Auth/ForgotPassword.jsx
 
 import React, { useState } from 'react';
-import { auth, sendPasswordResetEmail } from '../../firebase';
+import { auth, sendPasswordResetEmail } from '../../Firebase';
 import './ForgotPassword.css';
 
 const ForgotPassword = ({ onBackToLogin }) => {
