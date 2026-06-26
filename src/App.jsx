@@ -1,8 +1,8 @@
 // App.jsx - Complete Firebase Integration
 
 import React, { useState, useEffect } from 'react';
-import { auth, onAuthStateChanged, signOut } from './firebase';
-import { useFirestoreData } from './hooks/useFirestoreData';
+import { auth, onAuthStateChanged, signOut } from './Firebase';
+import { useFirestoreData } from './hooks/useFireStoreData';
 import Auth from './Components/Auth/Auth';
 import ExpenseForm from './Components/ExpenseForm/ExpenseForm';
 import ExpenseList from './Components/ExpenseList/ExpenseList';
@@ -12,7 +12,7 @@ import MonthlyReport from './Components/Reports/MonthlyReport';
 import BudgetPlanner from './Components/Budget/BudgetPlanner';
 import IncomeTracker from './Components/Income/IncomeTracker';
 import AdvancedAnalytics from './Components/Analytics/AdvanceAnalytics';
-import { exportToCSV, exportToPDF, printReport } from './utils/exportUtils';
+import { exportToCSV, exportToPDF, printReport } from './Utils/exportUtils';
 import './App.css';
 
 const App = () => {
