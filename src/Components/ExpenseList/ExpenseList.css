@@ -1,15 +1,15 @@
-/* Components/ExpenseList/ExpenseList.css */
+/* Components/ExpenseList/ExpenseList.css - Fully Responsive */
 
 .expense-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  max-height: 600px;
+  gap: 10px;
+  max-height: 500px;
   overflow-y: auto;
   padding-right: 4px;
 }
 
-/* Custom scrollbar for expense list */
+/* ========== CUSTOM SCROLLBAR ========== */
 .expense-list::-webkit-scrollbar {
   width: 4px;
 }
@@ -28,20 +28,20 @@
   background: linear-gradient(135deg, #5a67d8 0%, #6b46a1 100%);
 }
 
-/* Individual expense item */
+/* ========== EXPENSE ITEM ========== */
 .expense-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 20px;
+  padding: 14px 16px;
   background: white;
   border-radius: 12px;
   border: 1px solid #edf2f7;
   transition: all 0.2s ease;
   cursor: default;
   position: relative;
-  gap: 12px;
-  min-height: 80px;
+  gap: 10px;
+  min-height: 70px;
 }
 
 .expense-item:hover {
@@ -54,7 +54,7 @@
   transform: scale(0.99);
 }
 
-/* Category color indicator */
+/* ========== CATEGORY COLOR INDICATOR ========== */
 .expense-item::before {
   content: '';
   position: absolute;
@@ -87,25 +87,25 @@
   background: #a0aec0;
 }
 
-/* Left section with icon and details */
+/* ========== LEFT SECTION ========== */
 .expense-left {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   flex: 1;
   min-width: 0;
 }
 
 /* Category Icon */
 .expense-icon {
-  font-size: 1.8rem;
-  width: 48px;
-  height: 48px;
+  font-size: 1.6rem;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #f7fafc;
-  border-radius: 12px;
+  border-radius: 10px;
   flex-shrink: 0;
   border: 1px solid #edf2f7;
 }
@@ -116,14 +116,14 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
 }
 
 .expense-description {
   font-weight: 600;
   color: #2d3748;
-  font-size: 1rem;
-  margin-bottom: 2px;
+  font-size: 0.95rem;
+  margin-bottom: 1px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -137,8 +137,8 @@
 .expense-meta {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 0.8rem;
+  gap: 10px;
+  font-size: 0.75rem;
   color: #a0aec0;
   flex-wrap: wrap;
 }
@@ -147,10 +147,10 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 2px 12px;
+  padding: 2px 10px;
   background: #f7fafc;
   border-radius: 12px;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 500;
   color: #4a5568;
   text-transform: capitalize;
@@ -192,21 +192,23 @@
   display: flex;
   align-items: center;
   gap: 4px;
-}
-
-.expense-date .date-icon {
   font-size: 0.7rem;
 }
 
+.expense-date .date-icon {
+  font-size: 0.65rem;
+}
+
+/* ========== CHECKBOX ========== */
 .expense-checkbox {
   display: flex;
   align-items: center;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 .expense-checkbox input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   cursor: pointer;
   accent-color: #667eea;
   border-radius: 4px;
@@ -222,28 +224,28 @@
   accent-color: #48bb78;
 }
 
-/* Right section with amount and actions */
+/* ========== RIGHT SECTION ========== */
 .expense-right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   flex-shrink: 0;
 }
 
-/* Amount with currency */
+/* Amount */
 .expense-amount {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #2d3748;
   white-space: nowrap;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 2px;
+  gap: 1px;
 }
 
 .expense-amount .currency {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 500;
   color: #a0aec0;
 }
@@ -256,28 +258,29 @@
   color: #fc8181;
 }
 
-/* Action buttons */
+/* ========== ACTION BUTTONS ========== */
 .expense-actions {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   flex-shrink: 0;
 }
 
 .expense-actions button {
-  padding: 8px 10px;
+  padding: 6px 10px;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   transition: all 0.2s ease;
   background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
-  min-width: 60px;
+  min-width: 50px;
   font-weight: 500;
+  min-height: 32px;
 }
 
 .edit-btn {
@@ -312,50 +315,50 @@
   transform: scale(0.95);
 }
 
-/* Empty state */
+/* ========== EMPTY STATE ========== */
 .empty-message {
   text-align: center;
   color: #a0aec0;
-  padding: 3.5rem 1.5rem;
-  font-size: 0.95rem;
+  padding: 3rem 1.5rem;
+  font-size: 0.9rem;
   background: white;
-  border-radius: 16px;
+  border-radius: 14px;
   border: 2px dashed #e2e8f0;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .empty-message .empty-icon {
-  font-size: 3.5rem;
+  font-size: 3rem;
   opacity: 0.5;
 }
 
 .empty-message .empty-title {
   font-weight: 600;
   color: #4a5568;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .empty-message .empty-subtitle {
   color: #a0aec0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
-/* Expense count badge */
+/* ========== EXPENSE COUNT BADGE ========== */
 .expense-count {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  padding: 2px 12px;
+  padding: 2px 10px;
   border-radius: 12px;
-  min-width: 24px;
+  min-width: 20px;
 }
 
 .list-header {
@@ -368,42 +371,43 @@
 .list-header .header-left {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .list-header .header-left .list-icon {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .list-header .header-left .list-title {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: #4a5568;
 }
 
-/* Edit mode styles */
+/* ========== EDIT MODE ========== */
 .edit-mode {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .edit-mode .edit-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 8px;
 }
 
 .edit-mode input,
 .edit-mode select {
-  padding: 8px 12px;
+  padding: 6px 10px;
   border: 1.5px solid #e2e8f0;
-  border-radius: 8px;
-  font-size: 0.9rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
   transition: all 0.2s ease;
   background: #f8fafc;
   font-family: inherit;
+  min-height: 36px;
 }
 
 .edit-mode input:focus,
@@ -416,20 +420,21 @@
 
 .edit-mode .edit-actions {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   justify-content: flex-end;
 }
 
 .edit-mode .save-btn {
-  padding: 8px 20px;
+  padding: 6px 16px;
   background: #48bb78;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 500;
   transition: all 0.2s ease;
+  min-height: 34px;
 }
 
 .edit-mode .save-btn:hover {
@@ -438,15 +443,16 @@
 }
 
 .edit-mode .cancel-btn {
-  padding: 8px 20px;
+  padding: 6px 16px;
   background: #fc8181;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 500;
   transition: all 0.2s ease;
+  min-height: 34px;
 }
 
 .edit-mode .cancel-btn:hover {
@@ -454,47 +460,38 @@
   transform: scale(1.05);
 }
 
-/* Responsive Design */
+/* ======================================== */
+/* ========== RESPONSIVE ========== */
+/* ======================================== */
 
-/* Tablet */
-@media (min-width: 768px) {
+/* ---------- TABLET (768px - 1023px) ---------- */
+@media (min-width: 768px) and (max-width: 1023px) {
   .expense-list {
-    max-height: 650px;
+    max-height: 550px;
   }
 
   .expense-item {
-    padding: 18px 24px;
-    min-height: 90px;
+    padding: 14px 18px;
+    min-height: 75px;
   }
 
   .expense-description {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
   }
 
   .expense-amount {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
   }
 }
 
-/* Desktop */
-@media (min-width: 1024px) {
-  .expense-list {
-    max-height: 700px;
-  }
-
-  .expense-item:hover {
-    transform: translateX(6px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  }
-}
-
-/* Mobile */
+/* ---------- MOBILE (≤ 767px) ---------- */
 @media (max-width: 767px) {
   .expense-item {
-    padding: 14px 16px;
+    padding: 12px 14px;
     flex-wrap: wrap;
-    gap: 10px;
-    min-height: 70px;
+    gap: 8px;
+    min-height: 60px;
+    border-radius: 10px;
   }
 
   .expense-left {
@@ -503,94 +500,10 @@
   }
 
   .expense-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 1.4rem;
-  }
-
-  .expense-description {
-    font-size: 0.9rem;
-  }
-
-  .expense-meta {
-    font-size: 0.7rem;
-    gap: 8px;
-  }
-
-  .expense-category {
-    font-size: 0.65rem;
-    padding: 1px 8px;
-  }
-
-  .expense-right {
-    width: 100%;
-    justify-content: space-between;
-    padding-left: 54px;
-  }
-
-  .expense-amount {
-    font-size: 1rem;
-  }
-
-  .expense-amount .currency {
-    font-size: 0.65rem;
-  }
-
-  .expense-actions {
-    gap: 4px;
-  }
-
-  .expense-actions button {
-    padding: 6px 12px;
-    font-size: 0.75rem;
-    min-width: 50px;
-  }
-
-  .expense-item::before {
-    width: 3px;
-  }
-
-  .empty-message {
-    padding: 2.5rem 1rem;
-  }
-
-  .empty-message .empty-icon {
-    font-size: 2.5rem;
-  }
-
-  .expense-checkbox input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-  }
-
-  .edit-mode .edit-row {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .edit-mode .edit-actions {
-    flex-direction: column;
-  }
-
-  .edit-mode .save-btn,
-  .edit-mode .cancel-btn {
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-  }
-}
-
-/* Small Mobile */
-@media (max-width: 480px) {
-  .expense-item {
-    padding: 12px 14px;
-    min-height: 60px;
-  }
-
-  .expense-icon {
     width: 36px;
     height: 36px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    border-radius: 8px;
   }
 
   .expense-description {
@@ -602,36 +515,113 @@
     gap: 6px;
   }
 
+  .expense-category {
+    font-size: 0.6rem;
+    padding: 1px 8px;
+  }
+
+  .expense-category .category-dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .expense-date {
+    font-size: 0.65rem;
+  }
+
+  .expense-right {
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 46px;
+  }
+
   .expense-amount {
     font-size: 0.9rem;
+  }
+
+  .expense-amount .currency {
+    font-size: 0.6rem;
+  }
+
+  .expense-actions {
+    gap: 4px;
   }
 
   .expense-actions button {
     padding: 4px 10px;
     font-size: 0.7rem;
     min-width: 44px;
+    min-height: 28px;
   }
 
-  .expense-right {
-    padding-left: 46px;
+  .expense-item::before {
+    width: 3px;
+  }
+
+  .empty-message {
+    padding: 2rem 1rem;
+  }
+
+  .empty-message .empty-icon {
+    font-size: 2.5rem;
+  }
+
+  .empty-message .empty-title {
+    font-size: 0.95rem;
+  }
+
+  .empty-message .empty-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .expense-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+
+  .edit-mode .edit-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .edit-mode .edit-actions {
+    flex-direction: column;
+  }
+
+  .edit-mode .save-btn,
+  .edit-mode .cancel-btn {
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+    min-height: 38px;
+  }
+
+  .edit-mode input,
+  .edit-mode select {
+    padding: 5px 8px;
+    font-size: 0.8rem;
+    min-height: 34px;
   }
 }
 
-/* Landscape Mobile */
-@media (max-height: 600px) and (orientation: landscape) {
-  .expense-list {
-    max-height: 300px;
+/* ---------- SMALL MOBILE (≤ 480px) ---------- */
+@media (max-width: 480px) {
+  .expense-item {
+    padding: 10px 12px;
+    min-height: 50px;
+    border-radius: 8px;
   }
 
-  .expense-item {
-    padding: 10px 14px;
-    min-height: 50px;
+  .expense-list {
+    gap: 8px;
+    max-height: 400px;
   }
 
   .expense-icon {
     width: 32px;
     height: 32px;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    border-radius: 6px;
   }
 
   .expense-description {
@@ -639,7 +629,17 @@
   }
 
   .expense-meta {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
+    gap: 4px;
+  }
+
+  .expense-category {
+    font-size: 0.55rem;
+    padding: 1px 6px;
+  }
+
+  .expense-date {
+    font-size: 0.6rem;
   }
 
   .expense-amount {
@@ -647,13 +647,124 @@
   }
 
   .expense-actions button {
-    padding: 4px 8px;
+    font-size: 0.65rem;
+    padding: 3px 8px;
+    min-width: 36px;
+    min-height: 24px;
+  }
+
+  .expense-right {
+    padding-left: 38px;
+  }
+
+  .list-header .header-left .list-title {
     font-size: 0.7rem;
-    min-width: 40px;
+  }
+
+  .expense-count {
+    font-size: 0.6rem;
+    padding: 1px 8px;
+  }
+
+  .empty-message {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .empty-message .empty-icon {
+    font-size: 2rem;
+  }
+
+  .edit-mode .save-btn,
+  .edit-mode .cancel-btn {
+    min-height: 34px;
+    font-size: 0.75rem;
+  }
+
+  .edit-mode input,
+  .edit-mode select {
+    min-height: 30px;
+    font-size: 0.75rem;
+    padding: 4px 6px;
   }
 }
 
-/* Touch-friendly improvements */
+/* ---------- LANDSCAPE MOBILE ---------- */
+@media (max-height: 600px) and (orientation: landscape) {
+  .expense-list {
+    max-height: 250px;
+  }
+
+  .expense-item {
+    padding: 8px 12px;
+    min-height: 40px;
+  }
+
+  .expense-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+  }
+
+  .expense-description {
+    font-size: 0.75rem;
+  }
+
+  .expense-meta {
+    font-size: 0.55rem;
+    gap: 4px;
+  }
+
+  .expense-category {
+    font-size: 0.5rem;
+    padding: 1px 6px;
+  }
+
+  .expense-date {
+    font-size: 0.55rem;
+  }
+
+  .expense-amount {
+    font-size: 0.75rem;
+  }
+
+  .expense-amount .currency {
+    font-size: 0.5rem;
+  }
+
+  .expense-actions button {
+    font-size: 0.6rem;
+    padding: 2px 6px;
+    min-width: 32px;
+    min-height: 22px;
+  }
+
+  .expense-right {
+    padding-left: 0;
+    gap: 6px;
+  }
+
+  .expense-checkbox input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+  }
+
+  .empty-message {
+    padding: 1rem;
+  }
+
+  .empty-message .empty-icon {
+    font-size: 1.5rem;
+  }
+
+  .empty-message .empty-title {
+    font-size: 0.8rem;
+  }
+}
+
+/* ======================================== */
+/* ========== TOUCH-FRIENDLY ========== */
+/* ======================================== */
 @media (hover: none) {
   .expense-item:hover {
     transform: none;
@@ -674,9 +785,16 @@
   .expense-checkbox input[type="checkbox"]:active {
     transform: scale(0.9);
   }
+
+  .edit-mode .save-btn:active,
+  .edit-mode .cancel-btn:active {
+    transform: scale(0.95);
+  }
 }
 
-/* Dark Mode Support */
+/* ======================================== */
+/* ========== DARK MODE ========== */
+/* ======================================== */
 @media (prefers-color-scheme: dark) {
   .expense-item {
     background: #2d3748;
@@ -685,10 +803,15 @@
 
   .expense-item:hover {
     border-color: #718096;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   }
 
   .expense-description {
     color: #e2e8f0;
+  }
+
+  .expense-description strong {
+    color: #f7fafc;
   }
 
   .expense-amount {
@@ -762,9 +885,23 @@
   .edit-mode select:focus {
     background: #2d3748;
   }
+
+  .expense-checkbox input[type="checkbox"] {
+    border-color: #4a5568;
+  }
+
+  .expense-checkbox input[type="checkbox"]:checked {
+    accent-color: #48bb78;
+  }
+
+  .expense-count {
+    background: linear-gradient(135deg, #5a67d8, #6b46a1);
+  }
 }
 
-/* Reduced Motion */
+/* ======================================== */
+/* ========== REDUCED MOTION ========== */
+/* ======================================== */
 @media (prefers-reduced-motion: reduce) {
   .expense-item {
     transition: none;
@@ -786,5 +923,38 @@
 
   .expense-checkbox input[type="checkbox"] {
     transition: none;
+  }
+}
+
+/* ======================================== */
+/* ========== PRINT STYLES ========== */
+/* ======================================== */
+@media print {
+  .expense-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 1px solid #e2e8f0;
+    box-shadow: none;
+  }
+
+  .expense-item:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .expense-actions {
+    display: none;
+  }
+
+  .expense-checkbox {
+    display: none;
+  }
+
+  .edit-mode {
+    display: none;
+  }
+
+  .expense-item::before {
+    display: none;
   }
 }
