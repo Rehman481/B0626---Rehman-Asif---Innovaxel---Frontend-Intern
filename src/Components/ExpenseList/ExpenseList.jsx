@@ -57,7 +57,9 @@ const ExpenseList = ({ expenses, onDelete, onEdit }) => {
       <div className="empty-message">
         <div className="empty-icon">📊</div>
         <div className="empty-title">No expenses yet</div>
-        <div className="empty-subtitle">Start tracking your spending by adding your first expense!</div>
+        <div className="empty-subtitle">
+          Start tracking your spending by adding your first expense!
+        </div>
       </div>
     );
   }
@@ -78,15 +80,15 @@ const ExpenseList = ({ expenses, onDelete, onEdit }) => {
           className={`expense-item category-${expense.category?.toLowerCase() || 'other'}`}
         >
           {editingId === expense.id ? (
-            // Edit Mode
             <div className="edit-mode">
               <input
                 type="text"
-                name="description"
-                value={editFormData.description || ''}
+                name="title"
+                value={editFormData.title || ''}
                 onChange={handleChange}
-                placeholder="Description"
+                placeholder="Title"
               />
+
               <div className="edit-row">
                 <input
                   type="number"
@@ -96,6 +98,7 @@ const ExpenseList = ({ expenses, onDelete, onEdit }) => {
                   placeholder="Amount"
                   step="0.01"
                 />
+
                 <select
                   name="category"
                   value={editFormData.category || ''}
@@ -110,40 +113,54 @@ const ExpenseList = ({ expenses, onDelete, onEdit }) => {
                   <option value="Other">Other</option>
                 </select>
               </div>
+
               <input
                 type="date"
                 name="date"
                 value={editFormData.date || ''}
                 onChange={handleChange}
               />
+
               <div className="edit-actions">
-                <button className="save-btn" onClick={() => handleSave(expense.id)}>
+                <button
+                  className="save-btn"
+                  onClick={() => handleSave(expense.id)}
+                >
                   ✓ Save
                 </button>
-                <button className="cancel-btn" onClick={handleCancel}>
+
+                <button
+                  className="cancel-btn"
+                  onClick={handleCancel}
+                >
                   ✕ Cancel
                 </button>
               </div>
             </div>
           ) : (
-            // View Mode
             <>
               <div className="expense-left">
                 <div className="expense-checkbox">
                   <input type="checkbox" />
                 </div>
+
                 <div className="expense-icon">
                   {getCategoryIcon(expense.category)}
                 </div>
+
                 <div className="expense-details">
                   <div className="expense-description">
-                    <strong>{expense.description || 'Untitled Expense'}</strong>
+                    <strong>{expense.title || 'Untitled Expense'}</strong>
                   </div>
+
                   <div className="expense-meta">
-                    <span className={`expense-category category-${expense.category?.toLowerCase() || 'other'}`}>
+                    <span
+                      className={`expense-category category-${expense.category?.toLowerCase() || 'other'}`}
+                    >
                       <span className="category-dot"></span>
                       {expense.category || 'Other'}
                     </span>
+
                     <span className="expense-date">
                       <span className="date-icon">📅</span>
                       {formatDate(expense.date)}
@@ -151,12 +168,17 @@ const ExpenseList = ({ expenses, onDelete, onEdit }) => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="expense-right">
-                <div className={`expense-amount ${Number(expense.amount) >= 0 ? 'positive' : 'negative'}`}>
+                <div
+                  className={`expense-amount ${
+                    Number(expense.amount) >= 0 ? 'positive' : 'negative'
+                  }`}
+                >
                   PKR {Number(expense.amount).toFixed(2)}
                   <span className="currency">PKR</span>
                 </div>
+
                 <div className="expense-actions">
                   <button
                     className="edit-btn"
@@ -165,6 +187,7 @@ const ExpenseList = ({ expenses, onDelete, onEdit }) => {
                   >
                     ✏️ Edit
                   </button>
+
                   <button
                     className="delete-btn"
                     onClick={() => onDelete(expense.id)}
